@@ -33,7 +33,7 @@ async def on_message(message):
         await message.channel.send('おやすみなさい、良い夢を見てくださいね！(｡•̀ᴗ-)✧')	
  #おわ
     #「おわ」でメッセージが終わった場合労う
-    if message.content.endswith('おわ'):
+    if 'おわ' in message.content:
         await message.channel.send('お疲れ様です！∠(｀･ω･´)')	
  #にゃあ
     #「にゃあ」と言ったら猫の真似をする			
