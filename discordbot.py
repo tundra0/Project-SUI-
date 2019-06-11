@@ -78,6 +78,14 @@ async def on_message(message):
     if message.content == '変わり身のジツ！':
         await message.channel.send('イヤーッ！(｢･ω･)｣ｱﾁｮ')
 
+ #埋込みメッセージ「議題」
+    if '議題作成' in message.content:
+    match = re.search(r".*タイトルは(.+)、サブタイトルは(.+)！.*", message.content)
+    if match:
+        title, subtitle = match.groups()
+        embed = discord.Embed(title=title, description=subtitle)
+        await message.channel.send(embed)
+
 #自動会話
  #笑
     lis = ['笑うのは体にいいことですよ！','ꉂꉂ(>ᗜ<*)','何か楽しいことでもありましたか？|*･ω･)']
