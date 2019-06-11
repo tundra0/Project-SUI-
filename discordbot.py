@@ -68,7 +68,7 @@ async def on_message(message):
         await message.channel.send('小吉ですね！ちょっと優しくされるかも？')
         
     elif prob < 0.83:
-       await message.channel.send('吉の中で1番当たっても微妙に感じられる……つまり末吉なのです( ´･ω･`)')
+        await message.channel.send('吉の中で1番当たっても微妙に感じられる……つまり末吉なのです( ´･ω･`)')
        
     elif prob <= 1.0:
         await message.channel.send('おめでとうございます！大吉ですよ！(๑>∀<๑)♥')
