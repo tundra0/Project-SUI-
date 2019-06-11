@@ -1,9 +1,10 @@
 #インストールしたdiscord.pyの読み込み
 import discord 
 import os
-
 #randomモジュールの読み込み
 import random
+#reライブラリの読み込み
+import re
 
 #翠のトークン
 TOKEN = os.environ['DISCORD_BOT_TOKEN']
