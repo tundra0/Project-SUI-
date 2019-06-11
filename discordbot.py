@@ -82,7 +82,7 @@ async def on_message(message):
         if match:
             title, subtitle = match.groups()
             embed = discord.Embed(title=title, description=subtitle)
-            await message.channel.send(embed)
+            await message.channel.send(embed=embed)
 
 #自動会話
  #笑
