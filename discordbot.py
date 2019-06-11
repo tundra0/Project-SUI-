@@ -83,7 +83,7 @@ async def on_message(message):
     match = re.search(r".*タイトルは(.+)、サブタイトルは(.+)！.*", message.content)
     if match:
         title, subtitle = match.groups()
-        embed = discord.Embed(title=title, description=subtitle)
+        embed = discord.Embed(title=title, description=subtitle):
         await message.channel.send(embed)
 
 #自動会話
