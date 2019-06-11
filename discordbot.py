@@ -78,7 +78,7 @@ async def on_message(message):
         await message.channel.send('イヤーッ！(｢･ω･)｣ｱﾁｮ')
  #埋込みメッセージ「議題」
     if '議題作成' in message.content:
-        match = re.search(r".*タイトルは(.+)、サブタイトルは(.+)！.*", message.content)
+        match = re.search(r".*タイトルは(.+)、サブタイトルは(.+)。.*", message.content)
         if match:
             title, subtitle = match.groups()
             embed = discord.Embed(title=title, description=subtitle)
