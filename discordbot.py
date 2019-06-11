@@ -47,7 +47,6 @@ async def on_message(message):
     #「可愛い」と言うと照れる
     if message.content == '翠、可愛い！' or message.content == '翠、かわいい！':
         await message.channel.send('( ﻿˶﻿ˆ꒳ˆ˵﻿ )ｴﾍﾍ、ありがとうございます！スイ、頑張りますね！')
- 
  #御籤 
     #「翠、おみくじ引かせて！」って言うとおみくじ引く
     if message.content == '翠、御籤引かせて！' or message.content == '翠、今日の運勢は？':
@@ -73,14 +72,12 @@ async def on_message(message):
     
     elif prob <= 1.0:
         await message.channel.send('おめでとうございます！大吉ですよ！(๑>∀<๑)♥')
-
  #忍殺語
     if message.content == '変わり身のジツ！':
         await message.channel.send('イヤーッ！(｢･ω･)｣ｱﾁｮ')
-
  #埋込みメッセージ「議題」
     if '議題作成' in message.content:
-    match = re.search(r".*タイトルは(.+)、サブタイトルは(.+)！.*", message.content)
+    match = re.search(r".*タイトルは(.+)、サブタイトルは(.+)！.*", message.content):
     if match:
         title, subtitle = match.groups()
         embed = discord.Embed(title=title, description=subtitle):
