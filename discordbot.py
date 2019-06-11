@@ -52,24 +52,24 @@ async def on_message(message):
     if message.content == '翠、御籤引かせて！' or message.content == '翠、今日の運勢は？':
         prob = random.random()
     
-    if prob <= 0.3:
+    if prob < 0.3:
         await message.channel.send('凶です……外出を控えることをオススメします(  ･᷄ὢ･᷅  )')
-    
+        
     elif prob < 0.65:
         await message.channel.send('吉です！何かいい事があるかもですね！')
-    
+        
     elif prob < 0.71:
         await message.channel.send('末吉……どれくらい運がいいんでしょうね？•́ω•̀)?')
-
+        
     elif prob < 0.76:
         await message.channel.send('半吉は吉の半分、つまり運がいいのです！')
-
+        
     elif prob < 0.80:
         await message.channel.send('小吉ですね！ちょっと優しくされるかも？')
-    
+        
     elif prob < 0.83:
-        await message.channel.send('吉の中で1番当たっても微妙に感じられる……つまり末吉なのです( ´･ω･`)')
-    
+       await message.channel.send('吉の中で1番当たっても微妙に感じられる……つまり末吉なのです( ´･ω･`)')
+       
     elif prob <= 1.0:
         await message.channel.send('おめでとうございます！大吉ですよ！(๑>∀<๑)♥')
  #忍殺語
