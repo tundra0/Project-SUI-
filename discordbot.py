@@ -95,7 +95,7 @@ async def on_message(message):
     li = ['ほえー','わー','えへっ']
     resp = random.choice(li)
     
-    if (message.content.endswith(('よ','かぁ')) and random.random() > 0.8):
+    if (message.content.endswith(('よ','かぁ')) and random.random() > 0.6):
         await message.channel.send(resp)
         
 #役職付与
