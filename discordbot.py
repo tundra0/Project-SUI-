@@ -93,13 +93,13 @@ async def on_message(message):
     
     if (message.content.endswith(('笑','w')) and random.random() > 0.75):
         await message.channel.send(res)
- #ふむ
+ #ほえー
     li = ['ほえー','わー','えへっ']
     resp = random.choice(li)
     
     if (message.content.endswith(('よ','かぁ')) and random.random() > 0.6):
         await message.channel.send(resp)
-    elif message.content == 'おはよう':
+    elif 'おはよ' in message.content:
         pass
         
 #役職付与
