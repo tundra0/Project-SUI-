@@ -27,9 +27,9 @@ async def on_message(message):
  #おはよう
     #「おはよう」と発言したら「おはようございます、(送信したユーザーネーム)様！」と返す処理
     G_lis = ['今日も一日頑張りましょうね！','いってらっしゃいませー！']
-    re = random.choice(G_lis)
+    respon = random.choice(G_lis)
     if message.content.startswith('おはよ') or message.content == 'ぐっもーにん':
-        await message.channel.send('おはようございます、' + message.author.name + '様！( ⑉¯ ꇴ ¯⑉ )\n' + re)
+        await message.channel.send('おはようございます、' + message.author.name + '様！( ⑉¯ ꇴ ¯⑉ )\n' + respon)
  #おやすみ
     #「おやすみ」と発言したら「おやすみなさい！」と返す処理
     if message.content.startswith('おやすみ'):
