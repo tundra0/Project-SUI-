@@ -97,10 +97,10 @@ async def on_message(message):
     li = ['ほえー','わー','えへっ']
     resp = random.choice(li)
     
-    if (message.content.endswith(('よ','かぁ')) and random.random() > 0.6):
-        await message.channel.send(resp)
-    elif message.content == 'おはよ':
+    if message.content == 'おはよ':
         pass
+    elif (message.content.endswith(('よ','かぁ')) and random.random() > 0.6):
+        await message.channel.send(resp)
         
 #役職付与
     if message.content.startswith('同意します'):
