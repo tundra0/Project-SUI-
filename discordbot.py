@@ -107,7 +107,7 @@ async def on_message(message):
         role = discord.utils.get(message.guild.roles, name='FRONt LINe所属メンバー')
         await message.author.add_roles(role)
         
-        reply = f'マルチゲーミングチームFRONt LINeへようこそ、{message.author.mention} さん！あなたのご活躍に期待します！'
+        reply = f'マルチゲーミングチームFRONtLINe Gamersへようこそ、{message.author.mention} さん！あなたのご活躍に期待します！'
         await message.channel.send(reply)
 
 #ウェルカムメッセージ
