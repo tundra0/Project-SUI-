@@ -104,7 +104,7 @@ async def on_message(message):
         
 #役職付与
     if message.content.startswith('同意します'):
-        role = discord.utils.get(message.guild.roles, name='FRONt LINe所属メンバー')
+        role = discord.utils.get(message.guild.roles, name='FRONtLINe Gamers所属メンバー')
         await message.author.add_roles(role)
         
         reply = f'マルチゲーミングチームFRONtLINe Gamersへようこそ、{message.author.mention} さん！あなたのご活躍に期待します！'
