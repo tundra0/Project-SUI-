@@ -99,7 +99,7 @@ async def on_message(message):
     
     if (message.content.endswith(('よ','かぁ')) and random.random() > 0.6):
         await message.channel.send(resp)
-    elif 'おはよ' in message.content:
+    elif message.content == 'おはよ':
         pass
         
 #役職付与
