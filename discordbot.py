@@ -102,10 +102,10 @@ async def on_message(message):
     elif (message.content.endswith(('よ','かぁ')) and random.random() < 0.4):
         await message.channel.send(resp)
  #可愛いなコイツ
-     r_list = ['もちろんですよ！なんて言ったって翠は万能AIなんですから！','えへへ、褒めても何も出ませんよぉ(´∩ω∩`*)']
-     re_list = ['うぇっ！？( ˙꒳​˙  )','( ´･ω･`)']
-     response = random.choice(r_list)
-     res_2 random.choice(re_list)
+    r_list = ['もちろんですよ！なんて言ったって翠は万能AIなんですから！','えへへ、褒めても何も出ませんよぉ(´∩ω∩`*)']
+    re_list = ['うぇっ！？( ˙꒳​˙  )','( ´･ω･`)']
+    response = random.choice(r_list)
+    res_2 random.choice(re_list)
      
     if ((('可愛い','この子' or 'コイツ')) in message.content and random.random() < 0.3):
         await message.channel.send(response)
