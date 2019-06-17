@@ -107,7 +107,7 @@ async def on_message(message):
     response = random.choice(r_list)
     res_2 = random.choice(re_list)
      
-    if ((('可愛い','この子' or 'コイツ')) in message.content and random.random() < 0.3):
+    if ('可愛い' in message.content and re.search(r'この子|コイツ', message.content) and random.random() < 0.3):
         await message.channel.send(response)
         if message.content.startswish('違う翠じゃない'):
             await message.channel.send(res_2)
