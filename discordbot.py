@@ -109,8 +109,8 @@ async def on_message(message):
      
     if ((('可愛い','この子' or 'コイツ')) in message.content and random.random() < 0.3):
         await message.channel.send(response)
-            if message.content.startswish('違う翠じゃない'):
-                await message.channel.send(res_2)
+        if message.content.startswish('違う翠じゃない'):
+            await message.channel.send(res_2)
         
 #役職付与
     if message.content.startswith('同意します'):
