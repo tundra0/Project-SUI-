@@ -101,16 +101,6 @@ async def on_message(message):
         pass
     elif (message.content.endswith(('よ','かぁ')) and random.random() < 0.4):
         await message.channel.send(resp)
- #可愛いなコイツ
-    r_list = ['もちろんですよ！なんて言ったって翠は万能AIなんですから！','えへへ、褒めても何も出ませんよぉ(´∩ω∩`*)']
-    re_list = ['うぇっ！？( ˙꒳​˙  )','( ´･ω･`)']
-    response = random.choice(r_list)
-    res_2 = random.choice(re_list)
-     
-    if ('可愛い' in message.content and re.search(r'この子|コイツ', message.content) and random.random() < 0.3):
-        await message.channel.send(response)
-        if message.content.startswith('違う翠じゃない'):
-            await message.channel.send(res_2)
         
 #役職付与
     if message.content.startswith('同意します'):
