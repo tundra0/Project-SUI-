@@ -5,6 +5,8 @@ import os
 import random
 #reライブラリの読み込み
 import re
+#datetimeの読み込み
+import datetime
 
 #翠のトークン
 TOKEN = os.environ['DISCORD_BOT_TOKEN']
@@ -78,7 +80,13 @@ async def on_message(message):
  #忍殺語
     if message.content == '変わり身のジツ！':
         await message.channel.send('イヤーッ！(｢･ω･)｣ｱﾁｮ')
- #埋込みメッセージ「議題」
+ #年月日
+    if message.content.startswith('翠、今日は何日？'):
+        await message.channel.send(f'今日は{date.year}年{date.month}月{date.day}日です！')    
+    if message.content.startswith('翠、今は何時？'):
+        await message.channel.send(f'今は{date.hour}時str{date.minute}分{date.second}秒です！')
+
+#埋込みメッセージ「議題」
     if '議題作成' in message.content:
         match = re.search(r".*タイトルは(.+)、サブタイトルは(.+)。.*", message.content)
         if match:
