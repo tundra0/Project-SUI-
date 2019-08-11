@@ -26,12 +26,6 @@ async def on_message(message):
     if message.author.bot:
             return
 
-#サーバーステータス
- #メンバー総数
-    len(guild.members)
- #ユーザー総数
-    len(client.users)
-
 #会話
  #おはよう
     #「おはよう」と発言したら「おはようございます、(送信したユーザーネーム)様！」と返す処理
