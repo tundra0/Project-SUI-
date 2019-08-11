@@ -24,7 +24,14 @@ async def on_ready():
 async def on_message(message):
     #メッセージ送信者がbotだった場合の無視処理
     if message.author.bot:
-            return 
+            return
+
+#サーバーステータス
+ #メンバー総数
+    len(guild.members)
+ #ユーザー総数
+    len(client.users)
+
 #会話
  #おはよう
     #「おはよう」と発言したら「おはようございます、(送信したユーザーネーム)様！」と返す処理
