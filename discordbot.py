@@ -142,6 +142,7 @@ async def on_member_remove(member):
 
 #サーバーステータス
  #サーバー人数
+@client.event
 if '翠、今のサーバー人数を教えて' in message.content:
     T = サーバー人数
     S = len(guild.members)
