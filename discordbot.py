@@ -29,8 +29,7 @@ async def on_message(message):
 #サーバーステータス
  #サーバー人数
     if '翠、今のサーバー人数を教えて' in message.content:
-        embed = discord.Embed(title='サーバー人数', description=len(guild.members),color=discord.Color.green())
-        await message.channel.send(embed=embed)
+        await message.channel.send(f'現在就寝中のノイマンちゃんに代わり翠がお伝えします。今のサーバー人数は{len(guild.members)}人です！')
 
 #会話
  #おはよう
