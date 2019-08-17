@@ -26,6 +26,14 @@ async def on_message(message):
     if message.author.bot:
             return
 
+#サーバーステータス
+ #サーバー人数
+    if '翠、今のサーバー人数を教えて' in message.content:
+        T = サーバー人数
+        S = len(guild.members)
+        embed = discord.Embed(title=T, description=S,color=discord.Color.green())
+        await message.channel.send(embed=embed)
+
 #会話
  #おはよう
     #「おはよう」と発言したら「おはようございます、(送信したユーザーネーム)様！」と返す処理
@@ -139,16 +147,6 @@ async def on_member_join(member):
 @client.event
 async def on_member_remove(member):
     await    client.get_channel(553825840866131989).send(f'**{member.name}が前線を離れました。またの訪問をお待ちしております！**')
-
-#サーバーステータス
- #サーバー人数
-@client.event
-if '翠、今のサーバー人数を教えて' in message.content:
-    T = サーバー人数
-    S = len(guild.members)
-    embed = discord.Embed(title=T, description=S,color=discord.Color.green())
-    
-    await message.channel.send(embed=embed)
 
 #botの起動とdiscordサーバーへの接続
 client.run(TOKEN)
