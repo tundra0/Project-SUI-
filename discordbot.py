@@ -29,7 +29,7 @@ async def on_message(message):
 #サーバーステータス
  #サーバー人数
     if '翠、今のサーバー人数を教えて' in message.content:
-        await message.channel.send(f'現在就寝中のノイマンちゃんに代わり翠がお伝えします。今のサーバー人数は{len(guild.members)}人です！')
+        await message.channel.send(f'現在就寝中のノイマンちゃんに代わり翠がお伝えします。今のサーバー人数は{len(message.guild.members)}人です！')
 
 #会話
  #おはよう
