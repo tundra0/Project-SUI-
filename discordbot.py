@@ -145,26 +145,6 @@ async def on_member_join(member):
 async def on_member_remove(member):
     await    client.get_channel(553825840866131989).send(f'**{member.name}が前線を離れました。またの訪問をお待ちしております！**')
 
-#特殊コマンド
-@client.event
-async def on_message(message):
-    if message.author.id(345241157900697600)
-    
-#凍眠コマンド
-        if message.content == '翠':
-            await message.channel.send('了解しました、マスター')
-            await message.channel.send('二率演算…完了')
-            await message.channel.send('実行環境把握……完了')
-            await message.channel.send('事実固定機構式構築完了')
-            await message.channel.send('実行期限設定…完了')
-            await message.channel.send('オールクリア、才能行使の許可を、マスター')
-        
-        if message.content == '許可する':
-            await message.channel.send('許可を確認、才能行使【凍眠】')
-            F_role = discord.utils.get(message.guild.roles, name='【凍眠】')
-            await message.author.add_roles(F_role)
-            await message.channel.send('おやすみなさい、マスター。一年後、また起きるのを楽しみにしております。')
-
 #botの起動とdiscordサーバーへの接続
 client.run(TOKEN)
 			
