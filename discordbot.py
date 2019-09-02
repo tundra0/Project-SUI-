@@ -150,7 +150,7 @@ async def on_member_remove(member):
 async def on_message(message):
     
 #凍眠コマンド
-    if message.content = '翠':
+    if message.content == '翠':
         await message.channel.send('了解しました、マスター')
         await message.channel.send('二率演算…完了')
         await message.channel.send('実行環境把握……完了')
@@ -158,7 +158,7 @@ async def on_message(message):
         await message.channel.send('実行期限設定…完了')
         await message.channel.send('オールクリア、才能行使の許可を、マスター')
         
-    if message.content = '許可する':
+    if message.content == '許可する':
         await message.channel.send('許可を確認、才能行使【凍眠】')
         F_role = discord.utils.get(message.guild.roles, name='【凍眠】')
         await message.author.add_roles(F_role)
