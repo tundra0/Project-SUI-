@@ -126,24 +126,16 @@ async def on_message(message):
         pass
     elif (message.content.endswith(('よ','かぁ')) and random.random() < 0.4):
         await message.channel.send(resp)
-        
-#役職付与
-    if message.content.startswith('同意します'):
-        role = discord.utils.get(message.guild.roles, name='FRONtLINe Gamers所属メンバー')
-        await message.author.add_roles(role)
-        
-        reply = f'マルチゲーミングチームFRONtLINe Gamersへようこそ、{message.author.mention} さん！あなたのご活躍に期待します！'
-        await message.channel.send(reply)
 
 #ウェルカムメッセージ
 @client.event
 async def on_member_join(member):
-   await client.get_channel(553825840866131989).send(f'ようこそ、**{member.mention}**さん！あなたの訪問を歓迎させていただきます、FLナビゲーションbotの翠と申します！ まずは<#553911862933323786>を見ることをオススメしますよ！楽しんでくださいね！')
+   await client.get_channel(634257472865173525).send(f'ようこそ、**{member.mention}**さん！あなたの訪問を歓迎させていただきます、翠です！')
 
 #リムーブメッセージ
 @client.event
 async def on_member_remove(member):
-    await    client.get_channel(553825840866131989).send(f'**{member.name}が前線を離れました。またの訪問をお待ちしております！**')
+    await    client.get_channel(634257472865173525).send(f'**{member.name}**がサーバーを離れました。')
 
 #botの起動とdiscordサーバーへの接続
 client.run(TOKEN)
