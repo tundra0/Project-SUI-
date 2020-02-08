@@ -128,11 +128,13 @@ async def on_message(message):
         await message.channel.send(resp)
 
 #ウェルカムメッセージ
+
 get_channel_id = {673412098683830284:673412099350855702,633956743616921620:634257472865173525}
 
 @client.event
 async def on_member_join(member):
-    await client.get_channel(get_channel_id[member.guild]).send(f'ようこそ、**{member.mention}**さん！あなたの訪問を歓迎させていただきます、翠です！')
+   global get_channel_id
+   await client.get_channel(get_channel_id[member.guild.id]).send(f'ようこそ、**{member.mention}**さん！あなたの訪問を歓迎させていただきます、翠です！')
 
 #リムーブメッセージ
 @client.event
