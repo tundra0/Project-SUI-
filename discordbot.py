@@ -92,9 +92,9 @@ async def on_message(message):
         probability = random.random()
     
         if  probability > 0.75:
-            await message.channel.send('いざ。剣は生死の狭間にて大活し、禅は静思黙考の内大悟へ至る。我が剣に、お前は何れを見るものか。『剣術無双・剣禅一如』((꜆꜄ ˙꒳˙)꜆꜄꜆🔪')
+            await message.channel.send('いざ。剣は生死の狭間にて大活し、禅は静思黙考の内大悟へ至る。我が剣に、お前は何れを見るものか。『剣術無双・剣禅一如』((꜆꜄ ˙꒳˙)꜆꜄꜆')
         elif probability < 0.75:
-            await message.channel.send('参る……。我が心は不動。しかして自由にあらねばならぬ。即ち是、無念無想の境地なり。『剣術無双・剣禅一如』( ´−ω−`)🔪')
+            await message.channel.send('参る……。我が心は不動。しかして自由にあらねばならぬ。即ち是、無念無想の境地なり。『剣術無双・剣禅一如』( ´−ω−`)')
  #年月日
     if all(s in message.content for s in['今日','何日']):
         date = datetime.datetime.now()
