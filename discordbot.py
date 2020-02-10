@@ -138,7 +138,8 @@ async def on_member_join(member):
 
 #リムーブメッセージ
 @client.event
-async def on_member_remove(member):
+async def on_member_join(member):
+    global get_channel_id
      await client.get_channel(get_channel_id[member.guild]).send(f'**{member.name}がサーバーを離れました。**')
 
 #botの起動とdiscordサーバーへの接続
