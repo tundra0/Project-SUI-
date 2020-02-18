@@ -61,7 +61,7 @@ async def on_message(message):
 
  #御籤 
     #「翠、おみくじ引かせて！」って言うとおみくじ引く
-    if '翠、御籤引かせて！' in message.content or '翠、今日の運勢は？' in message.content:
+    if '翠、御籤引かせて' in message.content or '翠、今日の運勢' in message.content:
         prob = random.random()
     
         if prob < 0.3:
