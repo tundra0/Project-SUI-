@@ -58,9 +58,10 @@ async def on_message(message):
     #「可愛い」と言うと照れる
     if message.content == '翠、可愛い！' or message.content == '翠、かわいい！':
         await message.channel.send('( ﻿˶﻿ˆ꒳ˆ˵﻿ )ｴﾍﾍ、ありがとうございます！スイ、頑張りますね！')
+
  #御籤 
     #「翠、おみくじ引かせて！」って言うとおみくじ引く
-    if message.content == '翠、御籤引かせて！' or message.content == '翠、今日の運勢は？':
+    if '翠、御籤引かせて！' in message.content or '翠、今日の運勢は？' in message.content:
         prob = random.random()
     
         if prob < 0.3:
