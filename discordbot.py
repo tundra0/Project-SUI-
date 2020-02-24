@@ -128,6 +128,13 @@ async def on_message(message):
     elif (message.content.endswith(('よ','かぁ')) and random.random() < 0.4):
         await message.channel.send(resp)
 
+#ロール付与
+    if 'C' in message.content:
+        for role in message.guild.roles:
+            if role.name == 'C'
+                if message.author in role.members:
+                    await message.author.add_roles('C')
+
 #ウェルカムメッセージ
 
 get_channel_id = {673412098683830284:673412099350855702,633956743616921620:634257472865173525}
