@@ -132,7 +132,7 @@ async def on_message(message):
     if 'C' in message.content:
         for role in message.guild.roles:
             if role.name == 'C':
-                if message.author in role.members:
+                if not message.author in role.members:
                     await message.author.add_roles('C')
 
 #ウェルカムメッセージ
