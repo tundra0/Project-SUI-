@@ -129,12 +129,13 @@ async def on_message(message):
         await message.channel.send(resp)
 
 #ロール付与
-def add_role(role_name:str):
-    if role_name in message.content:
-        for role in message.guild.roles:
-            if role.name == role_name:
-                if not message.author in role.members:
-                    await message.author.add_roles(role)
+
+async def add_role(role_name:str):
+        if role_name in message.content:
+            for role in message.guild.roles:
+                if role.name == role_name:
+                    if not message.author in role.members:
+                        await message.author.add_roles(role)
 
 #ウェルカムメッセージ
 
