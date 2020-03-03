@@ -145,6 +145,8 @@ def add_role(role_name:str,message:discord.Message):
                     await message.author.add_roles(role)
                     
     # 発言が自己紹介チャンネルだったら
+
+async def on_message(message):
     if message.channel.name == "自己紹介":
         lang_list = ["c", "c++", "c#", "python", "unity", "java", "javascript", "html", "css", "wordpress"]
         for lang in lang_list:
