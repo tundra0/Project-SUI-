@@ -128,39 +128,6 @@ async def on_message(message):
     elif (message.content.endswith(('よ','かぁ')) and random.random() < 0.4):
         await message.channel.send(resp)
 
-#ロール付与
-
-async def add_role(role_name:str):
-        if role_name in message.content:
-            for role in message.guild.roles:
-                if role.name == role_name:
-                    if not message.author in role.members:
-                        await message.author.add_roles(role)
-
-def add_role(role_name:str,message:discord.Message):
-    if role_name in message.content:
-        for role in message.guild.roles:
-            if role.name == role_name:
-                if not message.author in role.members:
-                    await message.author.add_roles(role)
-                    
-    # 発言が自己紹介チャンネルだったら
-
-async def on_message(message):
-    if message.channel.name == "自己紹介":
-        lang_list = ["c", "c++", "c#", "python", "unity", "java", "javascript", "html", "css", "wordpress"]
-        for lang in lang_list:
-
-            # メッセージの中に言語が含まれていれば
-            if lang in message.content:
-                guild = message.guild
-                role = discord.utils.find(lambda r: r.name == lang, guild.roles)
-                if role is not None:
-                    member = message.author
-
-                    # 役職を付与する
-                    await member.add_roles(role)
-
 #ウェルカムメッセージ
 
 get_channel_id = {673412098683830284:673412099350855702,633956743616921620:634257472865173525}
