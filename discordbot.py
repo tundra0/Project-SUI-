@@ -128,6 +128,11 @@ async def on_message(message):
     elif (message.content.endswith(('よ','かぁ')) and random.random() < 0.4):
         await message.channel.send(resp)
 
+#役職付与
+role1 = discord.utils.get(message.guild.roles, name='VIRTUAL SQUARE Member') 
+    if message.content == 'Login'
+        await message.author.add_roles(role1)
+
 #ウェルカムメッセージ
 
 get_channel_id = {673412098683830284:673412099350855702,633956743616921620:634257472865173525}
